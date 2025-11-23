@@ -18,7 +18,10 @@ window.onscroll = function() {
         }
 
 function toggleMenu() {
-    var menuOpcoes = document.getElementById("menu-opcoes");
-    
-    menuOpcoes.classList.toggle('active'); 
+    var menu = document.getElementById("menu-opcoes");
+    if (menu.style.display === "none" || menu.style.display === "") {
+        menu.style.display = "block"; // Ou 'flex', dependendo do seu CSS
+    } else {
+        menu.style.display = "none";
+    }
 }

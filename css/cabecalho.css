@@ -167,11 +167,35 @@ header {
     
 }
 
+
+.btn-acao {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    min-width: 150px;
+}
+
+.btn-sair {
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid #007BFF;
+}
+
+
+.btn-excluir {
+    background-color: #db4857; 
+    color: white;
+    border: 2px solid #db4857;
+}
+
 #progressoBarra {
     height: 5px;
     background: var(--cor-progresso-barra);
     width: 0%;
-    transition: width 0.1s ease-out;  /* adiciona um movimento, uma transição*/
+    transition: width 0.1s ease-out;  
 }
 
 
