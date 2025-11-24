@@ -118,17 +118,15 @@ if (isset($conn)) {
     <link rel="stylesheet" href="../css/config.css">
     <link rel="stylesheet" href="../css/cabecalho.css">
 
+       
     <script>
-        (function(w, d, e, u, f, l, n) {
-            w[f] = w[f] || function() {
-                    (w[f].q = w[f].q || [])
-                    .push(arguments);
-                }, l = d.createElement(e), l.async = 1, l.src = u,
-                n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
-        })
-        (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '1936898');
     </script>
+   
 
 </head>
 
@@ -162,9 +160,11 @@ if (isset($conn)) {
 
             <?php echo $mensagem_status; ?>
 
-            <div class="newsletter">
+            <div class="newsletter" style="height: 20em;">
                 <div class="ml-embedded" data-form="ekd6Mo"></div>
+                
             </div>
+
             </form>
             <form action="configuracao.php" method="POST" id="form-nome">
                 <h3>📝Atualizar dados</h3>
@@ -203,9 +203,9 @@ if (isset($conn)) {
             <br>
 
             <div>
-                <a href="logout.php" class="btn-acao btn-sair">Sair</a>
+                <a href="logout.php" class="btn-sairConta" style="text-decoration: none; padding: 8px 20px; border-radius: 5px; font-size: 19px; background-color: #007BFF; color: white; border: 2px solid #007BFF;">Sair</a>
 
-                <a href="excluir_conta.php" class="btn-acao btn-excluir"
+                <a href="excluir_conta.php" class="btn-excluirConta" style="text-decoration: none; margin-left: 10px; padding: 8px 20px; border-radius: 5px; font-size: 19px; background-color: #db4857; color: white; border: 2px solid #db4857;"
                     onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível!');">
                     Excluir Conta
                 </a>
@@ -219,7 +219,6 @@ if (isset($conn)) {
             <strong>&copy; 2025 CM - Todos os direitos reservados</strong>
         </div>
     </footer>
-    <script src="newsletter.js"></script>
     <script src="./JS/progressoscroll.js"></script>
 
 </body>

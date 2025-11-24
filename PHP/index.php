@@ -33,7 +33,6 @@ session_start();
                     <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
                         <a href="configuracao.php" class="menu-perfil-link">Configurações</a>
-                        <a href="excluir_conta.php" class="menu-perfil-link" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível!');" onclick="return confirm()">Excluir conta</a>
                         <a href="logout.php" class="menu-perfil-link">Sair</a>
                     </div>
                 </div>

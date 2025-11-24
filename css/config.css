@@ -59,10 +59,8 @@ label {
 }
 
 /* BLOCO NEWSLETTER */
-.newsletter {
-    text-align: left; 
+.newsletter { 
     margin-top: 20px;
-    height: 15em;
     padding: 25px;
     border: 1px solid #6e6e6e; 
     border-radius: 5px;
