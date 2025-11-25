@@ -35,6 +35,8 @@ session_start();
     </header>
     <main>
         <br>
+        <br>
+        <br>
 
         <form 
             id="avaliacaoForm" 

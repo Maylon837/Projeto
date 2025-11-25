@@ -32,7 +32,7 @@ session_start();
                 <div class="menu-perfil">
                     <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
-                        <a href="configuracao.php" class="menu-perfil-link">⚙️Configurações</a>
+                        <a href="../PHP/configuracao.php" class="menu-perfil-link">⚙️Configurações</a>
                         <a href="logout.php" class="menu-perfil-link">🚪 Sair</a>
                     </div>
                 </div>

@@ -1,9 +1,9 @@
 <?php
 session_start();
-include("conexao.php");
+include("conexao.php"); 
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../login.php");
+    header("location: ../login.php");
     exit();
 }
 
@@ -11,31 +11,35 @@ $userId = $_SESSION['user_id'];
 $mensagem_status = "";
 
 try {
-    $sql_busca = "SELECT nome, sobrenome, email, newsletter_ativo FROM cadastros WHERE id = ?";
-    $stmt_busca = $conn->prepare($sql_busca);
-    $stmt_busca->bind_param("i", $userId);
-    $stmt_busca->execute();
-    $resultado = $stmt_busca->get_result();
-    $usuario_atual = $resultado->fetch_assoc();
-    $stmt_busca->close();
+    $sql_busca = "SELECT nome, sobrenome, email FROM cadastros WHERE id = ?"; 
+
+    if ($stmt_busca = $conn->prepare($sql_busca)) {
+        $stmt_busca->bind_param("i", $userId);
+        $stmt_busca->execute();
+        $resultado = $stmt_busca->get_result();
+        $usuario_atual = $resultado->fetch_assoc();
+        $stmt_busca->close();
+    } else {
+         throw new Exception("Erro de preparação SQL na busca: " . $conn->error);
+    }
+    
 } catch (Exception $e) {
     $mensagem_status = "<div class='bloco-mensagem erro'>Erro ao buscar dados: " . $e->getMessage() . "</div>";
-    $usuario_atual = ['nome' => '', 'sobrenome' => '', 'email' => '', 'newsletter_ativo' => 0];
+    $usuario_atual = ['nome' => '', 'sobrenome' => '', 'email' => ''];
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['atualizar_dados'])) {
     $novo_nome = trim($_POST['nome']);
     $novo_sobrenome = trim($_POST['sobrenome']);
 
-    if (!empty($novo_nome) && !empty($novo_sobrenome)) {
-
+    if (empty($novo_nome) || empty($novo_sobrenome)) {
+        $mensagem_status = "<div class='bloco-mensagem erro'>Nome e Sobrenome não podem estar vazios.</div>";
+    } else {
         $sql_update_dados = "UPDATE cadastros SET nome = ?, sobrenome = ? WHERE id = ?";
-
-        if (!$stmt_update = $conn->prepare($sql_update_dados)) {
-            $mensagem_status = "<div class='bloco-mensagem erro'>Erro de preparação SQL (Nome/Sobrenome): " . $conn->error . "</div>";
-        } else {
+        
+        if ($stmt_update = $conn->prepare($sql_update_dados)) {
             $stmt_update->bind_param("ssi", $novo_nome, $novo_sobrenome, $userId);
-
+            
             if ($stmt_update->execute()) {
                 $mensagem_status = "<div class='bloco-mensagem sucesso'>Nome e Sobrenome atualizados com sucesso!</div>";
                 $usuario_atual['nome'] = $novo_nome;
@@ -44,9 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['atualizar_dados'])) {
                 $mensagem_status = "<div class='bloco-mensagem erro'>Erro ao atualizar dados: " . $stmt_update->error . "</div>";
             }
             $stmt_update->close();
+        } else {
+            $mensagem_status = "<div class='bloco-mensagem erro'>Erro de preparação SQL (Nome/Sobrenome): " . $conn->error . "</div>";
         }
-    } else {
-        $mensagem_status = "<div class='bloco-mensagem erro'>Nome e Sobrenome não podem estar vazios.</div>";
     }
 }
 
@@ -61,48 +65,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['atualizar_senha'])) {
     } elseif (strlen($nova_senha) < 6) {
         $mensagem_status = "<div class='bloco-mensagem erro'>A senha deve ter pelo menos 6 caracteres.</div>";
     } else {
-        $senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
+        $hash_senha = password_hash($nova_senha, PASSWORD_DEFAULT);
         $sql_update_senha = "UPDATE cadastros SET senha = ? WHERE id = ?";
-
-        if (!$stmt_senha = $conn->prepare($sql_update_senha)) {
-            $mensagem_status = "<div class='bloco-mensagem erro'>Erro de preparação SQL (Senha): " . $conn->error . "</div>";
-        } else {
-            $stmt_senha->bind_param("si", $senha_hash, $userId);
-
-            if ($stmt_senha->execute()) {
+        
+        if ($stmt_update_senha = $conn->prepare($sql_update_senha)) {
+            $stmt_update_senha->bind_param("si", $hash_senha, $userId);
+            
+            if ($stmt_update_senha->execute()) {
                 $mensagem_status = "<div class='bloco-mensagem sucesso'>Senha atualizada com sucesso!</div>";
             } else {
-                $mensagem_status = "<div class='bloco-mensagem erro'>Erro ao atualizar senha: " . $stmt_senha->error . "</div>";
+                $mensagem_status = "<div class='bloco-mensagem erro'>Erro ao atualizar senha: " . $stmt_update_senha->error . "</div>";
             }
-            $stmt_senha->close();
-        }
-    }
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['toggle_newsletter'])) {
-    $status_anterior = (int)$_POST['status_atual'];
-    $novo_status = $status_anterior == 1 ? 0 : 1;
-
-    $sql_update_newsletter = "UPDATE cadastros SET newsletter_ativo = ? WHERE id = ?";
-
-    if (!$stmt_newsletter = $conn->prepare($sql_update_newsletter)) {
-        $mensagem_status = "<div class='bloco-mensagem erro'>Erro de preparação SQL (Newsletter): " . $conn->error . "</div>";
-    } else {
-        $stmt_newsletter->bind_param("ii", $novo_status, $userId);
-
-        if ($stmt_newsletter->execute()) {
-            if ($novo_status == 1) {
-                $mensagem_status = "<div class='bloco-mensagem sucesso'>Newsletter ativada! Você receberá atualizações.</div>";
-            } else {
-                $mensagem_status = "<div class='bloco-mensagem sucesso'>Newsletter desativada.</div>";
-            }
-            $usuario_atual['newsletter_ativo'] = $novo_status;
+            $stmt_update_senha->close();
         } else {
-            $mensagem_status = "<div class='bloco-mensagem erro'>Erro ao atualizar Newsletter: " . $stmt_newsletter->error . "</div>";
+            $mensagem_status = "<div class='bloco-mensagem erro'>Erro de preparação SQL (Senha): " . $conn->error . "</div>";
         }
-        $stmt_newsletter->close();
     }
 }
+
 
 if (isset($conn)) {
     $conn->close();
@@ -192,13 +172,6 @@ if (isset($conn)) {
 
                 <input type="submit" value="Atualizar Senha" class="input-senha">
             </form>
-
-
-            <div class="modo-escuro">
-                <p class="acessibilidade"><strong>Acessibilidade</strong></p>
-                <p><strong>Modo escuro</strong></p>
-                <label><input type="checkbox" name="modo_escuro"> Ativar modo escuro (Em Breve)</label>
-            </div>
 
             <br>
 
