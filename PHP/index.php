@@ -67,10 +67,10 @@ session_start();
     <main>
 
         <img src="../IMAGENS/principal.png" alt="Imagem principal" class="imagem-principal">
-        <h1>ESG: Ambiental, Social e Governança</h1>
+        <h1 id="Introdução">ESG: Ambiental, Social e Governança</h1>
 
 
-        <hr class="divisor-padrao" id="Introdução">
+        <hr class="divisor-padrao" >
 
 
         <h2>Introdução</h2>
@@ -90,11 +90,11 @@ session_start();
             ambiental, à inclusão social e à governança transparente,
             tornando o ESG um diferencial competitivo e um requisito
             para a perenidade das empresas.
+            <br id="O_que_e_esg">
         </p>
-
-
-        <hr class="divisor-padrao" id="O_que_e_esg">
-
+        
+        <hr class="divisor-padrao">
+        
 
         <h2>O que é ESG?</h2>
 
@@ -119,10 +119,11 @@ session_start();
             mudança de mentalidade empresarial, em que o lucro é
             buscado de forma ética, equilibrada e em harmonia com o
             meio ambiente e a sociedade.
+            <br id="ESG_sigla">
         </p>
 
 
-        <hr class="divisor-padrao" id="ESG_sigla">
+        <hr class="divisor-padrao" >
 
 
         <h2>Sigla ESG</h2>
@@ -197,10 +198,11 @@ session_start();
             <li><strong>Ética corporativa:</strong> códigos de conduta e canais de denúncia eficazes.</li>
             <li><strong>Transparência com investidores:</strong> comunicação clara sobre estratégias e resultados.</li>
             <li><strong>Responsabilidade legal e regulatória:</strong> cumprimento das leis e normas vigentes.</li>
+            <br id="Aplicando">
         </ul>
 
 
-        <hr class="divisor-padrao" id="Aplicando">
+        <hr class="divisor-padrao" >
 
 
         <h2>ESG na prática</h2>
@@ -221,12 +223,13 @@ session_start();
 
             <li><strong>Melhoria contínua:</strong>revise as ações regularmente e busque novas oportunidades para evoluir. ESG não é um projeto
                 com fim — é um processo constante de crescimento e responsabilidade.</li>
+                <br id="comprovar">
         </ul>
 
         <hr class="divisor-padrao">
 
 
-        <h2 id="comprovar">Como Comprovar Práticas ESG:</h2>
+        <h2>Como Comprovar Práticas ESG:</h2>
         <p>Não existe um “certificado ESG” único para todas as empresas, mas o mercado exige comprovação das práticas adotadas.
         </p>
         <p>Essa comprovação ocorre por meio de relatórios transparentes, certificações reconhecidas (como ISO 14001, SA8000 ou B Corp), auditorias externas,
@@ -235,9 +238,10 @@ session_start();
         </p>
         <p>Seguindo esses passos, a empresa inicia sua jornada sustentável, fortalece a cultura organizacional e demonstra responsabilidade
             social, ética e ambiental a colaboradores, clientes e sociedade.
+            <br id="Objetivo_do_esg">
         </p>
 
-        <hr class="divisor-padrao" id="Objetivo_do_esg">
+        <hr class="divisor-padrao" >
 
 
         <div class="container-objetivo">
@@ -256,10 +260,11 @@ session_start();
                 fortalecimento da reputação corporativa e o impacto positivo
                 na comunidade e no planeta.
             </p>
+            <br id="beneficio">
         </div>
 
 
-        <hr class="divisor-padrao" id="beneficio">
+        <hr class="divisor-padrao" >
 
 
         <h2>Benefícios para as empresas</h2>
@@ -280,10 +285,11 @@ session_start();
             perante clientes e parceiros, essas empresas tornam-se mais
             eficientes, inovadoras e resilientes frente às mudanças do
             mercado.
+            <br id="conclusao">
         </p>
 
 
-        <hr class="divisor-padrao" id="conclusao">
+        <hr class="divisor-padrao" >
 
 
         <h2>Conclusão</h2>
@@ -306,7 +312,7 @@ session_start();
 
     <footer>
         <div class="direitos"><strong>&copy; 2025 CM - Todos os direitos reservados</strong></div>
-        <div class="link-sobre-nos"><a href="sobre.php" class="link-rodape">Sobre Nós</a></div>
+        <div class="btn-sobre-nos"><a href="sobre.php" class="btn-rodape">Sobre Nós</a></div>
     </footer>
 
     <script src="../JS/progressoScroll.js"></script>

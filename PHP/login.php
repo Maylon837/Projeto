@@ -65,7 +65,7 @@ try {
 
         <nav>
             <a href="index.php" class="home">Home</a>
-            <a href="../PHP/index.php" class="contato">Fale Conosco</a>
+            <a href="../PHP/faleconosco.php" class="contato">Fale Conosco</a>
             <?php
             if (isset($_SESSION['user_id'])):
             ?>
@@ -122,7 +122,7 @@ try {
 
     <footer>
         <div class="direitos"><strong>&copy; 2025 CM - Todos os direitos reservados</strong></div>
-        <div class="link-sobre-nos"><a href="sobre.php" class="link-rodape">Sobre Nós</a></div>
+        <div class="btn-sobre-nos"><a href="sobre.php" class="btn-rodape">Sobre Nós</a></div>
     </footer>
 
     <script src="../JS/progressoScroll.js"></script>

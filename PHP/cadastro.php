@@ -118,8 +118,9 @@ try {
 
     <footer>
         <div class="direitos"><strong>&copy; 2025 CM - Todos os direitos reservados</strong></div>
-        <div class="link-sobre-nos"><a href="sobre.php" class="link-rodape">Sobre Nós</a></div>
+        <div class="btn-sobre-nos"><a href="sobre.php" class="btn-rodape">Sobre Nós</a></div>
     </footer>
+    
     <script src="../JS/progresscroll.js"></script>
 </body>
 

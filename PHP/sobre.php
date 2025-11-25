@@ -25,14 +25,14 @@
                     
                     <div class="perfil-card">
                         <h3>Camila Libório</h3>
-                        <p><strong>Função:</strong> Front-and Pesquisa e Conteúdo</p>
+                        <p><strong>Função:</strong> Front-end Pesquisa e Conteúdo</p>
                         <p>Fiquei responsável pela pesquisa de conteúdo sobre os pilares ESG, garantindo que as informações fossem precisas e relevantes, Usei javascript e HTML para o desenvolvimento do fale conosco e o Newsletter.</p>
                         <p class="universidade">Estudante de [ADS] na [Uiversidade de Mogi das Cruzes]</p>
                     </div>
                     
                     <div class="perfil-card">
                         <h3>Maylon Gabriel</h3>
-                        <p><strong>Função:</strong> Criação e Desenvolvimento back-and</p>
+                        <p><strong>Função:</strong> Criação e Desenvolvimento back-end</p>
                         <p>Sou o responsável pela arquitetura do sistema e pela lógica do site. Usei PHP, MySQL, HTML  para construir a funcionalidade do login, cadastro, segurança e o controle e a criação do banco de dados.</p>
                         <p class="universidade">Estudante de [ADS] na [Uiversidade de Mogi das Cruzes]</p>
                     </div>

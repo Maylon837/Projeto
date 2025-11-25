@@ -156,18 +156,6 @@ header {
     background-color: rgb(195, 240, 219);
 }
 
-/* linha de progresso */
-.progresso-container {
-    position: fixed;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: var(--cor-fundo-linha-progresso);
-    
-}
-
-
 .btn-acao {
     text-decoration: none;
     padding: 10px 20px;
@@ -191,6 +179,17 @@ header {
     border: 2px solid #db4857;
 }
 
+/* linha de progresso */
+.progresso-container {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--cor-fundo-linha-progresso);
+    
+}
+
 #progressoBarra {
     height: 5px;
     background: var(--cor-progresso-barra);
@@ -210,15 +209,14 @@ footer {
     align-items: center; 
 }
 
-.link-sobre-nos {
-    padding-right: 20px;
+.btn-sobre-nos {
+    padding-right: 30px;
     margin-left: auto; 
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.link-rodape{
+.btn-rodape{
     color: white;
     text-decoration: none;
     font-weight: bold;

@@ -239,17 +239,31 @@ header {
 /* footer */
 footer {
     width: 100%;
-    margin-top: 130px;
-    margin-bottom: 0;
-    padding: 35px 0px;
+    margin-top: 90px;
+    padding: 35px 0px; 
     background-color: var(--cor-rodape);
-    letter-spacing: 1px;
     color: white;
+    letter-spacing: 1px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
+.btn-sobre-nos {
+    padding-right: 30px;
+    margin-left: auto; 
+    color: white;
+    text-decoration: none;
+}
+
+.btn-rodape{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 .direitos {
-    text-align: center;
+    padding-left: 750px; 
 }
 
 
