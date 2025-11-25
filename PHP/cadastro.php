@@ -63,14 +63,7 @@ try {
 
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="menu-perfil">
-                    <button id="btn-perfil" onclick="toggleMenu()" class="home">
-                        Conta
-                    </button>
-                    <div id="menu-opcoes" class="menu-perfil-opcoes">
-                        <a href="configuracoes.php" class="menu-perfil-link">Configurações</a>
-                        <a href="excluir_conta.php" class="menu-perfil-link" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível!');">Excluir conta</a>
-                        <a href="logout.php" class="menu-perfil-link">Sair</a>
-                    </div>
+                    
                 </div>
             <?php else: ?>
                 <a href="cadastro.php" class="btn-cadastro">Cadastro</a>
@@ -86,9 +79,9 @@ try {
         ?>
 
             <div class="bloco-mensagem">
+                <br>
                 <h2>Cadastro Concluído!</h2>
                 <p>Seja bem-vindo(a)! Você se cadastrou.</p>
-
                 <a href="../PHP/index.php" class="btn-principal">
                     Voltar para a Página Principal
                 </a>
@@ -124,9 +117,8 @@ try {
     </main>
 
     <footer>
-        <div class="direitos">
-            <strong>&copy;2025 CM - Todos os direitos reservados</strong>
-        </div>
+        <div class="direitos"><strong>&copy; 2025 CM - Todos os direitos reservados</strong></div>
+        <div class="link-sobre-nos"><a href="sobre.php" class="link-rodape">Sobre Nós</a></div>
     </footer>
     <script src="../JS/progresscroll.js"></script>
 </body>

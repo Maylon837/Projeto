@@ -32,8 +32,8 @@ session_start();
                 <div class="menu-perfil">
                     <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
-                        <a href="configuracao.php" class="menu-perfil-link">Configurações</a>
-                        <a href="logout.php" class="menu-perfil-link">Sair</a>
+                        <a href="configuracao.php" class="menu-perfil-link">⚙️Configurações</a>
+                        <a href="logout.php" class="menu-perfil-link">🚪 Sair</a>
                     </div>
                 </div>
             <?php else: ?>
@@ -56,6 +56,7 @@ session_start();
                 <li><a href="#O_que_e_esg">O que é ESG</a></li>
                 <li><a href="#ESG_sigla">ESG sigla</a></li>
                 <li><a href="#Aplicando">ESG na prática</a></li>
+                <li><a href="#comprovar">Como comprovar praticas</a></li>
                 <li><a href="#Objetivo_do_esg">Objetivo do ESG</a></li>
                 <li><a href="#beneficio">Benefícios para as empresas</a></li>
                 <li><a href="#conclusao">Conclusão</a></li>
@@ -225,7 +226,7 @@ session_start();
         <hr class="divisor-padrao">
 
 
-        <h2>Como Comprovar Práticas ESG:</h2>
+        <h2 id="comprovar">Como Comprovar Práticas ESG:</h2>
         <p>Não existe um “certificado ESG” único para todas as empresas, mas o mercado exige comprovação das práticas adotadas.
         </p>
         <p>Essa comprovação ocorre por meio de relatórios transparentes, certificações reconhecidas (como ISO 14001, SA8000 ou B Corp), auditorias externas,
@@ -304,9 +305,8 @@ session_start();
     </main>
 
     <footer>
-        <div class="direitos">
-            <strong>&copy;2025 CM - Todos os direitos reservados</strong>
-        </div>
+        <div class="direitos"><strong>&copy; 2025 CM - Todos os direitos reservados</strong></div>
+        <div class="link-sobre-nos"><a href="sobre.php" class="link-rodape">Sobre Nós</a></div>
     </footer>
 
     <script src="../JS/progressoScroll.js"></script>
