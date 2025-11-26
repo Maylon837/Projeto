@@ -66,7 +66,7 @@ session_start();
 
     <main>
 
-        <img src="../IMAGENS/principal.png" alt="Imagem principal" class="imagem-principal">
+        <img src="../IMAGENS/img-principal4.jpg" alt="Imagem principal" class="imagem-principal">
         <h1 id="Introdução">ESG: Ambiental, Social e Governança</h1>
 
 
@@ -129,7 +129,7 @@ session_start();
         <h2>Sigla ESG</h2>
 
         <div>
-            <img src="../IMAGENS/pilares3.jpg" alt="Os 3 pilares" class="imagem-pilares">
+            <img src="../IMAGENS/pilares2.jpg" alt="Os 3 pilares" class="imagem-pilares">
         </div>
 
         <h2>E - Ambiental (Environmental)</h2>
@@ -246,7 +246,7 @@ session_start();
 
         <div class="container-objetivo">
             <h2>Objetivo do ESG</h2>
-            <img src="../IMAGENS/objetivo.png" alt="" class="img-objetivo">
+            <img src="../IMAGENS/objetivo4.avif" alt="" class="img-objetivo">
 
             <p>O principal objetivo do ESG é promover o desenvolvimento
                 sustentável nas organizações, integrando fatores ambientais,
@@ -306,7 +306,7 @@ session_start();
             e sustentável — para as empresas, para as pessoas e para o
             planeta.
         </p>
-        <img src="../IMAGENS/conclusao.png" alt="" class="conclusao">
+        <img src="../IMAGENS/conclusao2.png" alt="" class="conclusao">
 
     </main>
 
