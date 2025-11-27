@@ -133,18 +133,14 @@ if (isset($conn)) {
     <link rel="stylesheet" href="../css/cabecalho.css">
 
 
+
     <script>
-        (function(w, d, e, u, f, l, n) {
-            w[f] = w[f] || function() {
-                    (w[f].q = w[f].q || [])
-                    .push(arguments);
-                }, l = d.createElement(e), l.async = 1, l.src = u,
-                n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
-        })
-        (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '1936898');
     </script>
-
 
 </head>
 
@@ -178,8 +174,8 @@ if (isset($conn)) {
 
             <?php echo $mensagem_status; ?>
 
-            <div class="newsletter" style="height: 20em;">
-                <h3>💬NEWSLETTER</h3>
+            <div class="newsletter" style="margin-left: 7em; height: 15em; width: 33em; padding-top: 0px; ">
+                <h3 style="font-size: 2em; padding-bottom: 10px;">💬NEWSLETTER</h3>
                 <div class="ml-embedded" data-form="ekd6Mo"></div>
 
             </div>
