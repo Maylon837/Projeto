@@ -45,6 +45,7 @@ ul {
     text-align: center;
     letter-spacing: 3px;
     font-size: 40px;
+    color: var(--cor-titulos);
     
 }
 
@@ -53,11 +54,11 @@ ul {
     font-size: 20px;
     letter-spacing: 1px;
     line-height: 1.7;
-    color: black;
+    color: var(--cor-titulos);
 }
 
 #conteudo-indice a:hover {
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(221, 221, 221);
     font-style: italic;
 }
 
@@ -115,7 +116,8 @@ main p {
 /*introdução*/
 .imagem-principal {
     max-width: 100%;
-    margin-top: 150px;
+    margin-top: 170px;
+    padding-bottom: 50px;
 }
 
 .p-unico {
