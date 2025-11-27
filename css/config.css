@@ -67,25 +67,44 @@ label {
 }
 
 /* BLOCO DE CONFIGURAÇÕES */
-#bloco-configuracoes {
-    text-align: center; 
-    padding: 30px; 
-    border: 1px solid #ccc; 
-    max-width: 600px; 
-    width: 90%; 
-    background-color: #f9f9f9; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+#bloco-configuracoes #form-email-novo {
+    text-align: left;
+    margin-top: 20px; 
+    
+    /* DEFINIÇÕES DE CAIXA */
+    padding: 25px; 
+    border: 1px solid #e6e6e6; /* CORREÇÃO FINAL DA BORDA */
+    border-radius: 5px;
+    
+    /* CORREÇÃO DO VAZAMENTO */
+    min-height: 8em; 
 }
 
-/* FORMULÁRIOS */
+/* Garante que o input de email use o novo ID sem conflitos */
+#bloco-configuracoes #form-email-novo #email_novo {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Estilo do INPUT de Email dentro do novo formulário */
+#form-email-novo input[type="email"] {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px; /* Reduz a margem para o botão ficar mais próximo */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
 /* NOVO NOME E SOBRENOME */
 #form-nome {
-    text-align: left; 
+    text-align: left;
     margin-top: 20px;
-    height: 17em;
+    min-height: 12em; /* Altura mínima para dois campos + padding */
     padding: 25px;
-    border: 1px solid #6e6e6e; 
+    border: 1px solid #e6e6e6;
     border-radius: 5px;
 }
 
@@ -105,7 +124,27 @@ label {
     border-radius: 5px;
 }
 
+#email {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .input-nome {
+    padding: 8px;
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    font-size: 15px; 
+    letter-spacing: 2px;
+    cursor: pointer;
+    
+}
+
+.input-email {
     width: 100%; 
     padding: 8px;
     background-color: #007bff; 
@@ -118,7 +157,6 @@ label {
     
 }
 
-/* NOVA SENHA */
 #form-senha {
     text-align: left; 
     margin-top: 30px;
@@ -157,22 +195,4 @@ label {
     
 }
 
-/* MODO ESCURO */
-.modo-escuro {
-    margin-top: 15px; 
-    text-align: left; 
-    padding-left: 15px;
-    padding-bottom: 20px;
-    border: 1px solid #6e6e6e; 
-    border-radius: 5px;
-}
-
-.acessibilidade {
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-
-.modo-escuro label {
-    font-size: 17px;
-}
 

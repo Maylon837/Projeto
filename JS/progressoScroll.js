@@ -20,7 +20,7 @@ window.onscroll = function() {
 function toggleMenu() {
     var menu = document.getElementById("menu-opcoes");
     if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "block"; // Ou 'flex', dependendo do seu CSS
+        menu.style.display = "block"; 
     } else {
         menu.style.display = "none";
     }
