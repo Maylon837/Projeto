@@ -179,14 +179,25 @@ if (isset($conn)) {
             <?php echo $mensagem_status; ?>
 
             <div class="newsletter" style="height: 20em;">
+                <h3>💬NEWSLETTER</h3>
                 <div class="ml-embedded" data-form="ekd6Mo"></div>
 
             </div>
 
+            <form action="configuracao.php" method="POST" id="form-email">
+                <input type="hidden" name="atualizar_email" value="1">
+                <h3>📩Atualizar Email</h3>
+
+                <label for="email_novo"><strong>Novo Email:</strong></label>
+                <input type="email" name="email" id="email"
+                value="<?php echo htmlspecialchars($usuario_atual['email']); ?>" required placeholder="Digite o novo email">
+               
+                <input type="submit" value="Atualizar Email" class="input-email">
             </form>
+            
             <form action="configuracao.php" method="POST" id="form-nome">
                 <input type="hidden" name="atualizar_nome_sobrenome" value="1">
-                <h3><img src="../IMAGENS/icone-editar.png" alt=""> Atualizar dados</h3>
+                <h3>📝Atualizar dados</h3>
 
                 <label for="nome"><strong>Novo Nome:</strong></label>
                 <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($usuario_atual['nome']); ?>" required placeholder="Digite o novo nome">
@@ -194,26 +205,14 @@ if (isset($conn)) {
                 <label for="sobrenome"><strong>Novo Sobrenome:</strong></label>
                 <input type="text" name="sobrenome" id="sobrenome" value="<?php echo htmlspecialchars($usuario_atual['sobrenome']); ?>" required placeholder="Digite o novo sobrenome">
 
-                <input type="submit" value="Atualizar Dados" class="input-nome">
+                <input type="submit" value="Atualizar Dados" class="input-nome">    
             </form>
-
-            <form action="configuracao.php" method="POST" id="form-nome">
-                <input type="hidden" name="atualizar_email" value="1">
-                <h3><img src="../IMAGENS/icone-editar.png" alt=""> Atualizar Email</h3>
-                <br>
-                <label for="email_novo"><strong>Novo Email:</strong></label>
-                <input type="email" name="email" id="nome"
-                value="<?php echo htmlspecialchars($usuario_atual['email']); ?>"
-                required
-                placeholder="Digite o novo email">
-                    <br>
-
-                <input type="submit" value="Atualizar Email" class="input-senha">
-            </form>
+            
+            
 
             <form action="configuracao.php" method="POST" id="form-senha">
                 <input type="hidden" name="atualizar_senha" value="1">
-                <h3><img src="../IMAGENS/icone-editar.png" alt=""> Atualizar Senha</h3>
+                <h3>🔒Atualizar Senha</h3>
 
                 <label for="senha"><strong>Nova Senha:</strong></label>
                 <input type="password" name="senha" id="senha" required placeholder="Digite a nova senha">
@@ -225,7 +224,7 @@ if (isset($conn)) {
             </form>
             <br>
 
-            <div>
+            <div class="btns-config">
                 <a href="logout.php" class="btn-sairConta" style="text-decoration: none; padding: 8px 20px; border-radius: 5px; font-size: 19px; background-color: #007BFF; color: white; border: 2px solid #007BFF;">Sair</a>
 
                 <a href="excluir_conta.php" class="btn-excluirConta" style="text-decoration: none; margin-left: 10px; padding: 8px 20px; border-radius: 5px; font-size: 19px; background-color: #db4857; color: white; border: 2px solid #db4857;"

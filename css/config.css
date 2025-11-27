@@ -67,34 +67,15 @@ label {
 }
 
 /* BLOCO DE CONFIGURAÇÕES */
-#bloco-configuracoes #form-email-novo {
+#bloco-configuracoes {
     text-align: left;
     margin-top: 20px; 
-    
-    /* DEFINIÇÕES DE CAIXA */
     padding: 25px; 
-    border: 1px solid #e6e6e6; /* CORREÇÃO FINAL DA BORDA */
+    background-color: #fcfcfc;
+    box-shadow: 2px 2px 5px rgb(158, 158, 158), -2px -2px 5px rgb(158, 158, 158);
+    border: 1px solid #9c9c9c;
     border-radius: 5px;
-    
-    /* CORREÇÃO DO VAZAMENTO */
     min-height: 8em; 
-}
-
-/* Garante que o input de email use o novo ID sem conflitos */
-#bloco-configuracoes #form-email-novo #email_novo {
-    width: 97%;
-    padding: 10px;
-    margin-bottom: 10px; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-/* Estilo do INPUT de Email dentro do novo formulário */
-#form-email-novo input[type="email"] {
-    width: 97%;
-    padding: 10px;
-    margin-bottom: 10px; /* Reduz a margem para o botão ficar mais próximo */
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 
@@ -104,7 +85,7 @@ label {
     margin-top: 20px;
     min-height: 12em; /* Altura mínima para dois campos + padding */
     padding: 25px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #6e6e6e; 
     border-radius: 5px;
 }
 
@@ -124,39 +105,20 @@ label {
     border-radius: 5px;
 }
 
-#email {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 .input-nome {
-    padding: 8px;
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-    border-radius: 5px;
-    font-size: 15px; 
-    letter-spacing: 2px;
-    cursor: pointer;
-    
-}
-
-.input-email {
     width: 100%; 
-    padding: 8px;
+    padding: 8px; 
     background-color: #007bff; 
     color: white; 
     border: none; 
     border-radius: 5px;
-    font-size: 15px; 
-    letter-spacing: 2px;
+    font-size: 15px;
+    letter-spacing: 2px; 
     cursor: pointer;
     
 }
 
+/* SENHA */
 #form-senha {
     text-align: left; 
     margin-top: 30px;
@@ -196,3 +158,38 @@ label {
 }
 
 
+/* EMAIL */
+#form-email {
+    text-align: left; 
+    margin-top: 30px;
+    height: 10em;
+    padding: 25px;
+    border: 1px solid #6e6e6e; 
+    border-radius: 5px;
+}
+
+#email {
+    width: 97%;
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+.input-email {
+    width: 100%; 
+    padding: 8px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 2px; 
+    cursor: pointer;
+}
+
+.btns-config {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
