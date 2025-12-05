@@ -18,16 +18,15 @@ try {
 
         if ($resultado->num_rows === 1) {
             $usuario = $resultado->fetch_assoc();
-            $senha_hash = $usuario['senha']; 
+            $senha_hash = $usuario['senha'];
 
             if (password_verify($senha_form, $senha_hash)) {
 
-                $_SESSION['user_id'] = $usuario['id']; 
+                $_SESSION['user_id'] = $usuario['id'];
                 $_SESSION['email'] = $email_form;
-                $_SESSION['login_sucesso'] = true; 
-
+                $_SESSION['login_sucesso'] = true;
             } else {
-                
+
                 $mensagem_status = "<div class='mensagem-erro'>Erro: Senha incorreta.</div>";
             }
         } else {
@@ -70,7 +69,7 @@ try {
             if (isset($_SESSION['user_id'])):
             ?>
                 <div class="menu-perfil">
-                    
+
                 </div>
             <?php else: ?>
                 <a href="cadastro.php" class="btn-cadastro">Cadastro</a>
@@ -110,10 +109,13 @@ try {
                     <label for="senha"><strong>Senha:</strong></label>
                     <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
                     <?php echo $mensagem_status; ?>
+                    <p class="link-recuperacao">
+                        <a href="../PHP/esqueci_senha.php">Esqueci minha senha</a>
+                    </p>
                     <input type="submit" value="Login">
 
-                    <p class="btn-rapido">Não tem um cadastro? <a href="cadastro.php">Faça um cadastro.</a></p>
                     
+
                 </form>
             </div>
 
