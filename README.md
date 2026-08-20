@@ -31,7 +31,7 @@ O site foi desenvolvido em dupla com uma colega de faculdade, como parte das ati
 
 Projeto desenvolvido em dupla:
 - Maylon Gabriel Flausino de Souza
-- [Nome da sua colega]
+- [Camila Libório Santos]
 
 ## 💻 Como executar
 
