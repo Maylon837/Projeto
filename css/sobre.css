@@ -1,47 +1,57 @@
+/* CM.ESG — Página Sobre Nós */
 
 .bloco-sobre-nos {
-    max-width: 900px; 
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
+    max-width: var(--largura-leitura);
+    margin: 50px auto 90px;
+    padding: 0 24px;
 }
+
+.bloco-sobre-nos h1 { text-align: center; margin-bottom: 30px; }
 
 .missao-projeto, .tecnologia-futuro {
-    margin-bottom: 40px;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
+    background: var(--verde-fundo);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 30px;
 }
-
-.dupla-container {
-    display: flex;
-    justify-content: space-around; 
-    gap: 30px;
-    margin-top: 30px;
-    flex-wrap: wrap; 
-}
-
-.perfil-card {
-    background-color: #f9f9f9;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    flex: 1; 
-    min-width: 280px;
-}
-
-.perfil-card h3 {
-    color: #008000; 
+.missao-projeto h2, .tecnologia-futuro h2, .perfil-dupla h2 {
     margin-top: 0;
 }
 
-.btn-contato {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 30px;
-    font-weight: bold;
+.perfil-card {
+    margin-top: 16px;
+    background: var(--creme-cartao);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: var(--sombra);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+.perfil-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-forte);
+}
+.perfil-card h3 { margin: 0 0 8px; color: var(--verde-medio); }
+.perfil-card .universidade {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    margin-top: 12px;
+}
+
+.botoes-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.botao-secundario {
+    background: transparent;
+    color: var(--verde-medio);
+    border: 1.5px solid var(--verde-medio);
+    box-shadow: none;
+}
+.botao-secundario:hover {
+    background: var(--verde-fundo);
+    color: var(--verde-escuro);
 }

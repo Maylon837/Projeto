@@ -1,0 +1,50 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - CM ESG</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/contato.css">
+</head>
+<body>
+
+    <?php include __DIR__ . '/../includes/cabecalho.php'; ?>
+
+    <main>
+
+        <form
+            id="avaliacaoForm"
+            class="cartao-central"
+            action="https://submit.jotform.com/submit/253214758609665"
+            method="POST">
+            <h2>💬 Envie sua Avaliação ou Mensagem</h2>
+            <p>Preencha o formulário para nos enviar sua avaliação.</p>
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" id="email" name="q59_email" required placeholder="Digite seu e-mail.">
+
+            <label for="mensagem">Sua Mensagem/Avaliação:</label>
+            <textarea id="mensagem" name="q61_mensagem" rows="6" required placeholder="Deixe sua opinião ou dúvida."></textarea>
+
+            <p id="mensagemSucesso" class="mensagem-sucesso">
+            ✅ Avaliação enviada com sucesso! Obrigado.</p>
+
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+
+    </main>
+
+    <?php include __DIR__ . '/../includes/rodape.php'; ?>
+
+    <script src="../js/progressoScroll.js"></script>
+    <script src="../js/faleconosco.js"></script>
+    <script src="../js/animacoes.js"></script>
+
+</body>
+</html>

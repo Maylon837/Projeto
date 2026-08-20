@@ -16,12 +16,3 @@ window.onscroll = function() {
                  barraDeProgresso.style.width = porcentagemLida.toFixed(2) + "%";
             }
         }
-
-function toggleMenu() {
-    var menu = document.getElementById("menu-opcoes");
-    if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "block"; 
-    } else {
-        menu.style.display = "none";
-    }
-}

@@ -1,213 +1,201 @@
-@import url(cor.css);
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+/* ============================================================
+   CM.ESG — Página inicial (artigo sobre ESG)
+   Layout de leitura: conteúdo centralizado, índice lateral flutuante
+   ============================================================ */
 
-/* GERAL */
-
-* {
-    font-family: Figtree, 'Arial';
-}
-
-body {
-    margin: 0 1px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-
-/*SUMARIO FIXO*/
-#indice-lateral {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 360px;
-    padding: 10px ;
-    margin-top: 70px;
-    z-index: 1000;
-    transition: all 0.7s ease-in-out;
-    border: 2px solid var(--cor-padrao-site);
-    background-color: var(--cor-fundo-indice);
-}
-
-#conteudo-indice {
-    padding: 10px;
-}
-
-#conteudo-indice ul {
-    padding: 0px 25px;
-    text-align: center;
-}
-
-#conteudo-indice h1 {
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    letter-spacing: 3px;
-    font-size: 40px;
-    color: var(--cor-titulos);
-    
-}
-
-#conteudo-indice a {
-    text-decoration: none;
-    font-size: 20px;
-    letter-spacing: 1px;
-    line-height: 1.7;
-    color: var(--cor-titulos);
-}
-
-#conteudo-indice a:hover {
-    background-color: rgb(221, 221, 221);
-    font-style: italic;
-}
-
-.indice-fechado {
-    /* esconde a maior parte, e deixa o botão a vista */
-    transform: translateX(calc(-109% + 35px));
-}
-
-#btn-alternar {
-    position: absolute;
-    top: 0;
-    right: -35px;
-    width: 35px;
-    height: 100%;
-    border: none;
-    padding: 0;
-    font-size: 3em;
-    cursor: pointer;
-    background-color: var(--cor-btn-indice);
-    color: rgb(255, 255, 255);
-
-}
-
-
-/*MAIN*/
 main {
-    max-width: 800px;
-    margin: auto;
+    max-width: var(--largura-leitura);
+    margin: 50px auto 90px;
+    padding: 0 24px;
+    text-align: left;
 }
 
 main h1 {
     text-align: center;
-    letter-spacing: 4px;
-    color: var(--cor-titulos);
-    font-size: 50px;
+    font-size: 2.1rem;
+    margin: 24px 0 6px;
 }
 
 main h2 {
-    font-size: 45px;
-    letter-spacing: 3px;
-    color: var(--cor-titulos);
-    margin: 0px;
-    
+    font-size: 1.5rem;
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main h2::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--verde-suave);
+    flex-shrink: 0;
 }
 
-main p {
-    
-    font-size: 1.3em;
-    letter-spacing: 1px;
-    line-height: 1.3;
+main p { color: var(--texto); margin: 14px 0; }
+main p.p-unico {
+    background: var(--verde-fundo);
+    border-left: 3px solid var(--verde-suave);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--texto-suave);
 }
 
-
-/*CORPO MAIN*/
-/*introdução*/
 .imagem-principal {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--sombra-forte);
+}
+
+.imagem-pilares, .img-objetivo, .conclusao {
     max-width: 100%;
-    margin-top: 170px;
-    padding-bottom: 50px;
-}
-
-.p-unico {
-    font-size: 17px;
-    letter-spacing: 1px;
-}
-
-
-/*os 3 pilares*/
-.imagem-pilares {
-    display: block;
-    width: 60%;
     margin: 20px auto;
-
+    border-radius: 16px;
+    box-shadow: var(--sombra);
 }
 
-.lista-pilares {
-    padding: 15px 20px;
-    margin: 20px 0px;  
+.divisor-padrao, .divisor-pilares {
+    border: none;
+    border-top: 1px solid var(--borda);
+    margin: 40px 0;
 }
 
-.lista-pilares li {
-    letter-spacing: 1px;
-    font-size: 1.2em;
-    padding: 9px 0px;
+/* ---------- Pilares interativos (acordeão) ---------- */
+.acordeao-pilares {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 24px 0 10px;
 }
 
-.lista-pilares strong {
-    color: var(--cor-titulos);
-    font-size: 1.2em;
-    letter-spacing: 1px;
+.pilar {
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    background: var(--creme-cartao);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: box-shadow var(--transicao);
+}
+.pilar:hover { box-shadow: var(--sombra-forte); }
+
+.pilar-cabecalho {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+}
+.pilar-icone { font-size: 1.4rem; }
+.pilar-titulo {
+    flex: 1;
+    font-family: var(--fonte-titulo);
+    font-size: 1.15rem;
+    color: var(--verde-escuro);
+}
+.pilar-seta {
+    color: var(--verde-suave);
+    transition: transform var(--transicao);
+    font-size: 1.1rem;
+}
+.pilar.aberto .pilar-seta { transform: rotate(180deg); }
+
+.pilar-conteudo {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding var(--transicao);
+    padding: 0 24px;
+}
+.pilar.aberto .pilar-conteudo {
+    padding: 0 24px 22px;
+}
+.pilar-conteudo p:first-child { margin-top: 0; }
+
+.lista-pilares, .lista-praticas {
+    padding-left: 20px;
+    margin: 16px 0;
+}
+.lista-pilares li, .lista-praticas li {
+    margin-bottom: 12px;
+    padding-left: 4px;
+}
+.lista-pilares li strong, .lista-praticas li strong {
+    color: var(--verde-escuro);
 }
 
-
-/*ESG na prática*/
-.lista-praticas {
-    padding: 20px 25px;
-    margin: 20px 0px; 
-}
-
-.lista-praticas li {
-    letter-spacing: 1px;
-    font-size: 1.2em;
-    padding: 7px 0px;
-}
-
-.lista-praticas strong {
-    letter-spacing: 1px;
-    font-size: 1.2em;
-    color: var(--cor-titulos);
-}
-
-/*objetivo do esg*/
 .container-objetivo {
-    max-width: 900px;
-    margin: auto;
-    padding: 5px 0px;
-    line-height: 1.6;
-    text-align: justify;
+    background: var(--verde-fundo);
+    border-radius: 18px;
+    padding: 28px 30px;
+    margin: 30px 0;
+}
+.container-objetivo h2 { margin-top: 0; }
+.container-objetivo .img-objetivo { margin: 16px auto; max-width: 320px; }
+
+/* ---------- Índice lateral flutuante ---------- */
+#indice-lateral {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    z-index: 500;
+    display: flex;
+    align-items: flex-start;
+    transition: transform var(--transicao);
 }
 
-.img-objetivo {
-    float: right;  /* faz a imagem ir para o canto superior direito. */
-    width: 50%; /* ajuste o tamanho conforme quiser */
-    margin: 0 0 0px 10px; /* espaço entre imagem e texto */
-    
+#conteudo-indice {
+    width: 240px;
+    background: var(--creme-cartao);
+    border: 1px solid var(--borda);
+    border-radius: 0 16px 16px 0;
+    box-shadow: var(--sombra-forte);
+    padding: 20px 20px 20px 24px;
 }
-
-
-/*conclusão*/
-.conclusao {
-    max-width: 70%;
-    height: auto;
+#conteudo-indice h1 {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    color: var(--verde-suave);
+    margin: 0 0 12px;
+}
+#conteudo-indice ul { list-style: none; padding: 0; margin: 0; }
+#conteudo-indice li { margin-bottom: 8px; }
+#conteudo-indice a {
+    font-size: 0.9rem;
+    color: var(--texto);
     display: block;
-    margin: 0 auto;
-    padding-bottom: 50px;
+    padding: 4px 0;
+    border-left: 2px solid transparent;
+    padding-left: 8px;
+    transition: all var(--transicao);
+}
+#conteudo-indice a:hover {
+    color: var(--verde-medio);
+    border-left-color: var(--verde-suave);
 }
 
-/*divisor das partes*/
-.divisor-padrao {
+#btn-alternar {
+    background: var(--verde-medio);
+    color: #fff;
     border: none;
-    border-top: 7px solid var(--cor-linha-divisao);
-    width: 100%;
-    margin: 35px 0px;
+    width: 28px;
+    height: 48px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: var(--sombra);
+    transition: background var(--transicao);
 }
+#btn-alternar:hover { background: var(--verde-escuro); }
 
-.divisor-pilares {
-    border: none;
-    border-top: 2px solid var(--cor-linha-divisao);
-    width: 100%;
-    margin: 25px 0px;
+#indice-lateral.indice-fechado #conteudo-indice { display: none; }
+
+@media (max-width: 1200px) {
+    #indice-lateral { display: none; }
 }
-
