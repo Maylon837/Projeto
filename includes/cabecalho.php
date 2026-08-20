@@ -1,12 +1,4 @@
 <?php
-/**
- * Cabeçalho do site (logo + navegação + busca).
- * Inclua este arquivo dentro de <body>, nas páginas que ficam em /paginas.
- *
- * Antes de incluir, defina (opcional):
- *   $mostrar_barra_progresso = true;  // mostra a barrinha de progresso de leitura no topo
- *   $mostrar_busca = true;            // mostra a barra de pesquisa por tópicos (só faz sentido na index)
- */
 ?>
 <?php if (!empty($mostrar_barra_progresso)): ?>
     <div class="progresso-container">

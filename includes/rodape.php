@@ -1,7 +1,4 @@
 <?php
-/**
- * Rodapé do site (com assinatura da newsletter). Inclua nas páginas em /paginas.
- */
 ?>
 <footer class="rodape-site">
     <div class="rodape-conteudo">
