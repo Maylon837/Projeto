@@ -30,8 +30,18 @@ O site foi desenvolvido em dupla com uma colega de faculdade, como parte das ati
 ## 👥 Desenvolvimento
 
 Projeto desenvolvido em dupla:
-- Maylon Gabriel Flausino de Souza
-- Camila Libório Santos
+- [Maylon Gabriel Flausino de Souza](https://www.linkedin.com/in/maylon-gabriel-100b383a8/)
+- [Camila Libório Santos](https://www.linkedin.com/in/camilaliborio/)
+
+## 👤 Autor
+
+**Maylon Gabriel Flausino de Souza**  
+Estudante de Análise e Desenvolvimento de Sistemas - UMC
+
+- LinkedIn: [Maylon Gabriel](https://www.linkedin.com/in/maylon-gabriel-100b383a8/)
+- Portfólio: [https://maylon837.github.io/Portifolho/](https://maylon837.github.io/Portifolho/)
+
+
 
 ## 💻 Como executar
 
