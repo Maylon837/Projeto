@@ -387,3 +387,24 @@ mark.busca-destaque {
     0% { background: var(--verde-claro); }
     100% { background: transparent; }
 }
+
+/* ---------- Ajustes gerais para telas pequenas (celular) ---------- */
+@media (max-width: 600px) {
+    body { font-size: 15.5px; }
+
+    .cartao-central { margin: 30px auto; padding: 28px 22px; border-radius: 14px; }
+
+    .rodape-site { padding: 34px 18px 20px; }
+    .rodape-newsletter { padding: 20px 18px; }
+    .rodape-base { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .rodape-nav { flex-wrap: wrap; gap: 12px; }
+}
+
+@media (max-width: 380px) {
+    .cabecalho-logo span { display: none; } /* em telas bem estreitas, só o ícone do logo */
+}
+
+/* ---------- Ajustes para tablets ---------- */
+@media (min-width: 601px) and (max-width: 900px) {
+    .cabecalho-conteudo { padding: 12px 20px; }
+}

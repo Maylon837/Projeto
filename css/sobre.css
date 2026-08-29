@@ -55,3 +55,12 @@
     background: var(--verde-fundo);
     color: var(--verde-escuro);
 }
+
+@media (max-width: 600px) {
+    .bloco-sobre-nos { padding: 0 16px; margin: 30px auto 60px; }
+    .bloco-sobre-nos h1 { font-size: 1.5rem; }
+    .missao-projeto, .tecnologia-futuro { padding: 18px 18px; }
+    .perfil-card { padding: 18px 18px; }
+    .botoes-sobre { flex-direction: column; align-items: stretch; }
+    .botoes-sobre .botao { text-align: center; }
+}

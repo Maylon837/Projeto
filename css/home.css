@@ -199,3 +199,31 @@ main p.p-unico {
 @media (max-width: 1200px) {
     #indice-lateral { display: none; }
 }
+
+/* ---------- Telas menores (tablet e celular) ---------- */
+@media (max-width: 900px) {
+    main { max-width: 100%; }
+    .imagem-principal { max-height: 300px; }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 16px;
+        margin: 30px auto 60px;
+    }
+    main h1 { font-size: 1.6rem; margin-top: 16px; }
+    main h2 { font-size: 1.25rem; margin-top: 32px; }
+
+    .imagem-principal { max-height: 200px; border-radius: 14px; }
+
+    .container-objetivo { padding: 20px 18px; }
+    .container-objetivo .img-objetivo { max-width: 100%; }
+
+    .pilar-cabecalho { padding: 14px 16px; gap: 8px; }
+    .pilar-titulo { font-size: 1rem; }
+    .pilar-icone { font-size: 1.2rem; }
+    .pilar.aberto .pilar-conteudo { padding: 0 16px 18px; }
+    .pilar-conteudo { padding: 0 16px; }
+
+    .lista-pilares, .lista-praticas { padding-left: 16px; }
+}

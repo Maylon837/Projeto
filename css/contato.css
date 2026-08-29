@@ -51,3 +51,7 @@
 }
 
 #mensagemSucesso { display: none; }
+
+@media (max-width: 600px) {
+    #avaliacaoForm { margin: 30px auto 60px; padding: 28px 22px; }
+}
