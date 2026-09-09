@@ -7,7 +7,7 @@
 // Uso em cada página, logo antes de fechar </body>:
 //   <div id="cabecalho-container"></div>   (no lugar do cabeçalho)
 //   <div id="rodape-container"></div>      (no lugar do rodapé)
-//   <script src="../js/layout.js"></script>
+//   <script src="js/layout.js"></script>
 //
 // Opções (defina ANTES do script de layout, se precisar):
 //   <script>var CONFIG_CABECALHO = { barraProgresso: true, busca: true };</script>
@@ -32,7 +32,7 @@ ${barraProgresso}
 <header class="cabecalho-site" id="cabecalho-site">
     <div class="cabecalho-conteudo">
         <a href="index.html" class="cabecalho-logo">
-            <img src="../imagens/logo-branca.png" alt="Logo CM ESG">
+            <img src="imagens/logo-branca.png" alt="Logo CM ESG">
             <span>CM<strong>.ESG</strong></span>
         </a>
 ${busca}
