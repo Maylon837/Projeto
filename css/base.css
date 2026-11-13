@@ -408,3 +408,6 @@ mark.busca-destaque {
 @media (min-width: 601px) and (max-width: 900px) {
     .cabecalho-conteudo { padding: 12px 20px; }
 }
+
+.rodape-autores { color: #cfe6d4; font-size: 0.85rem; }
+.rodape-autores strong { color: #fff; }

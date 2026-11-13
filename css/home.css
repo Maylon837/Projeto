@@ -227,3 +227,53 @@ main p.p-unico {
 
     .lista-pilares, .lista-praticas { padding-left: 16px; }
 }
+
+/* ---------- Imagens de destaque e cartões resumidos ---------- */
+.imagem-destaque {
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+    max-height: 360px;
+    object-fit: cover;
+}
+.imagem-menor { max-height: 300px; }
+
+.lista-curta {
+    padding-left: 20px;
+    margin: 16px 0;
+}
+.lista-curta li { margin-bottom: 10px; padding-left: 4px; }
+.lista-curta li strong { color: var(--verde-escuro); }
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 20px 0;
+}
+.cartoes-3 { grid-template-columns: 1fr; }
+.cartao {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--creme-cartao);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 16px 18px;
+    box-shadow: var(--sombra);
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+}
+.cartao strong { color: var(--verde-escuro); font-family: var(--fonte-titulo); font-size: 1.05rem; }
+.cartao-icone { font-size: 1.5rem; }
+
+@media (min-width: 700px) {
+    .cartoes-4 { grid-template-columns: repeat(4, 1fr); }
+    .cartoes-3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+    .cartoes { grid-template-columns: 1fr; }
+    .imagem-destaque { max-height: 220px; border-radius: 14px; }
+}
