@@ -61,7 +61,7 @@ function htmlRodape() {
         </div>
 
         <div class="rodape-base">
-            <span>🌿 &copy; 2025 CM.ESG — Todos os direitos reservados</span>
+            <span>🌿 &copy; 2026 CM.ESG — Todos os direitos reservados</span>
             <nav class="rodape-nav">
                 <a href="index.html">Home</a>
                 <a href="sobre.html">Sobre Nós</a>
